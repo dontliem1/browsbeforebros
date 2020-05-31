@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Brows before Bros — брови и ресницы Тюмень</title>
+	<meta name="description" content="Гармоничная архитектура бровей и наращивание ресниц в Тюмени. Обучение на моделирование и долговременную укладку бровей.">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<!--	<link rel="manifest" href="site.webmanifest">-->
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#b3002d">
+	<meta name="msapplication-TileColor" content="#f8f0f7">
+	<meta name="theme-color" content="#f8f0f7">
+	<meta name="apple-mobile-web-app-title" content="Бровки">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container home">
+	<div class="home-header">
+		<h1>Брови и ресницы в Тюмени</h1><a class="ig" href="https://www.instagram.com/browsbeforebros.tmn/" onclick="yaCounter55149181.reachGoal('instagram');" target="_blank"><span>Инстаграм</span></a><br>
+		<img class="logo" src="media/logo.svg" width="272" alt="Логотип салона красоты Brows before Bros.">
+	</div>
+	<nav class="home-nav">
+		<ul>
+			<li><a class="btn-pink" href="price/">Услуги</a></li>
+			<li><a class="btn-pink" href="courses/">Обучение</a></li>
+		</ul>
+	</nav>
+	<p class="lead">Брови важнее мальчиков и скандальчиков!</p>
+	<div class="master">
+		<p><img src="media/Мастер%20бровей%20Анастасия%20Хабибьянова.jpg" alt="Фотография Анастасии Хабибьяновой." width="100" height="100"> Привет, меня зовут Настя! Пять лет назад я начала работать в бьюти-сфере, наращивая ресницы на дому, но в итоге полюбила заниматься бровями.</p>
+		<p class="master-brows">Брови — это моя страсть!</p>
+		<p>Я регулярно учусь, участвую в соревнованиях, открываю новые техники, и делюсь ими. Год назад я запустила обучающий курс для бровистов «Брови как система», после которого ученицы получают восторженные отзывы от своих клиентов и коллег.</p>
+		<p>Мой главный принцип в работе — сделать гармоничные брови, которые подчеркнут достоинства лица и скроют мелкие недостатки.</p>
+		<p class="master-face">Я определяю форму бровей по анатоми&shy;ческим точкам лица</p>
+		<p>Благодаря этому, брови смотрятся целостно и уместно. Затем я использую нитку, воск и пинцет для убирания лишних волосков. В конце процедуры я наношу масло и делаю массаж бровей для закрепления результата.</p>
+		<p>Полюби настоящую себя — запишись в Brows before Bros.</p>
+	</div>
+	<div class="instagram">
+		<p>Записывайтесь на услуги и обучение, смотрите работы, читайте статьи, узнавайте об акциях и задавайте вопросы в инстаграме:</p>
+		<div><a class="btn-pink" href="https://www.instagram.com/browsbeforebros.tmn/" onclick="yaCounter55149181.reachGoal('instagram');" target="_blank">@browsbeforebros.tmn</a><img src="media/Обучение%20брови%20Тюмень.jpg" width="150" height="150" alt="Обучение брови Тюмень."><img src="media/Брови%20в%20Тюмени.JPG" width="150" height="150" alt="Брови в Тюмени."><img src="media/Салон%20красоты%20брови%20Тюмень.JPG" width="150" height="150" alt="Салон красоты Тюмень."><img src="media/Архитектура%20бровей%20Тюмень.JPG" width="150" height="150" alt="Архитектура бровей Тюмень."><img src="media/Брови%20Тюмень.JPG" width="150" height="150" alt="Брови Тюмень."><img src="media/Брови%20и%20ресницы%20Тюмень.jpg" width="150" height="150" alt="Брови и ресницы Тюмень."></div>
+	</div>
+	<figure class="map">
+		<figcaption>Адрес салона: ул. Мельникайте, 98, оф. 318 <a class="link-dashed" aria-expanded="false" aria-controls="map" id="toggleMap" target="_blank" href="https://go.2gis.com/02gws">Показать на карте Тюмени.</a></figcaption>
+		<div id="map"></div>
+	</figure>
+</main>
+<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&skin=light&lazy=true"></script>
+<script>
+	document.getElementById('toggleMap').onclick = function() {
+		this.setAttribute('aria-expanded','true');
+		DG.then(function () {
+			document.getElementById('toggleMap').hidden = true;
+			document.getElementById('map').style.minHeight = '25em';
+			let map = DG.map('map', {
+				center: [57.140568, 65.570241],
+				zoom: 14,
+				fullscreenControl: false,
+				maxBounds: [
+					[57, 65.3],
+					[57.25, 65.8]
+				],
+				minZoom: 11,
+				maxZoom: 16
+			});
+			let bbbIcon = DG.icon({
+				iconUrl: 'marker.png',
+				iconRetinaUrl: 'marker@2x.png',
+				iconSize: [36, 48],
+				iconAnchor: [18, 48]
+			});
+			let bbb = DG.marker([57.140568, 65.570241], {
+				icon: bbbIcon,
+				title: 'Перейти на карту 2GIS',
+				alt: 'Маркер со ссылкой на карту 2GIS'
+			}).addTo(map);
+			bbb.on('click', function () {
+				if (window.confirm('Перейти на карту 2GIS?')) {
+					window.open('https://go.2gis.com/02gws', '_blank');
+				}
+			});
+		});
+		return false;
+	}
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(55149181, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });</script><noscript><div><img src="https://mc.yandex.ru/watch/55149181" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</body>
+</html>
