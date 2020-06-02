@@ -166,6 +166,11 @@ header, main, footer {display: block;}
 .courses-tariffs ul ul {
 	padding-left: 1.25em;
 }
+.percent {
+	background-color: hsl(345, 44%, 96%);
+	padding: .1em .25em;
+	border-radius: .3em;
+}
 
 @media (min-width: 59em) {
 	html {
@@ -265,8 +270,8 @@ header, main, footer {display: block;}
 		border-right: 1px solid #eee;
 		padding-right: 1.25em;
 	}
-	.courses-tariffs b+small {
+	/* .courses-tariffs b+small {
 		display: block;
 		margin-bottom: -1.1em;
-	}
+	} */
 }
