@@ -163,9 +163,27 @@ header, main, footer {display: block;}
 	width: 100%;
 	height: auto;
 }
+.webinar-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	margin-bottom: 3em;
+}
+.webinar-wrapper>iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 .courses-tariffs>ul {
 	padding: 0;
 	list-style: none;
+}
+.courses-tariffs h2 {
+	font-weight: 300;
+	color: #aaa;
+	font-size: 100%;
 }
 .courses-tariffs h3 {
 	border-bottom: .25em solid hsl(345, 44%, 96%);
