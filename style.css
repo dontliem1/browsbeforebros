@@ -141,7 +141,10 @@ header, main, footer {display: block;}
 .price .btn-pink {margin-top: .5em;}
 
 /* Обучение */
-.courses ol, .courses ul {
+.courses>p:not(.lead), .courses>div {
+	line-height: 1.4;
+}
+.courses ol, .courses>ul {
 	margin-top: .5em;
 }
 .courses li {
@@ -188,14 +191,20 @@ header, main, footer {display: block;}
 	color: #aaa;
 	font-size: 100%;
 }
-.courses-tariffs h3 {
-	border-bottom: .25em solid hsl(345, 44%, 96%);
-	font-size: 200%;
-	margin: 0;
+.tariff-header {
+	border-bottom: .4em solid hsl(345, 44%, 96%);
+	margin-bottom: .5em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: baseline;
+}
+.tariff-header time {
+	white-space: nowrap;
+}
+.courses-tariffs h3 {
+	font-size: 200%;
+	margin: 0;
 }
 .courses-tariffs small {
 	font-size: 1rem;
@@ -210,6 +219,12 @@ header, main, footer {display: block;}
 	font-size: 200%;
 }
 .courses-tariffs ul ul {
+	padding-left: 1.25em;
+	margin-top: .25em;
+}
+.tariff-subheader {
+	margin-bottom: 0;
+	margin-top: .5em;
 	padding-left: 1.25em;
 }
 .percent {
@@ -336,10 +351,12 @@ header, main, footer {display: block;}
 	}
 	.courses-tariffs>ul {
 		display: flex;
+		margin-bottom: 0;
 	}
 	.courses-tariffs>ul>li {
 		display: inline-flex;
 		flex-direction: column;
+		margin-bottom: 0;
 	}
 	.courses-tariffs ul ul {
 		margin-bottom: auto;
@@ -348,6 +365,10 @@ header, main, footer {display: block;}
 		margin-right: 1.25em;
 		border-right: 1px solid #eee;
 		padding-right: 1.25em;
+	}
+	.courses-tariffs>ul+small {
+		display: block;
+		margin-bottom: 2em;
 	}
 	/* .courses-tariffs b+small {
 		display: block;
