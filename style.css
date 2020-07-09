@@ -45,6 +45,26 @@ header, main, footer {display: block;}
 .btn-pink:disabled {background-color: #F8F0F7;}
 .btn-pink[href]:hover {background-color: hsl(345, 44%, 97%); transform: translateY(-2px); box-shadow: 0 3px 4px rgba(219, 162, 176, .5);}
 .btn-pink[href]:active {background-color: hsl(345, 44%, 92%); transform: translateY(1px); box-shadow: 0 -1px 2px rgba(219, 162, 176, .5);}
+.btn-copy {
+	font: inherit;
+	padding: 0;
+	border: 0;
+	background: none;
+	margin: 0;
+	position: relative;
+	cursor: pointer;
+}
+.copied::after {
+	content: 'Скопировано';
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: hsl(345, 44%, 96%);
+	padding: .25em .5em;
+	border-radius: .5em;
+	box-shadow: 0 .1em .25em rgba(0, 0, 0, .5);
+}
 /*Формы*/
 .form-field {max-width: 100%; padding: .2em 0 .3em; border-radius: 0; flex-grow: 1; border: 0; border-bottom: 1px solid; background: none;}
 .select-arrow {position: relative;}
@@ -141,7 +161,7 @@ header, main, footer {display: block;}
 .price .btn-pink {margin-top: .5em;}
 
 /* Обучение */
-.courses>p:not(.lead), .courses>div {
+.courses p:not(.lead), .courses>div {
 	line-height: 1.4;
 }
 .courses ol, .courses>ul {
@@ -168,6 +188,11 @@ header, main, footer {display: block;}
 }
 .courses-webinar {
 	margin-bottom: 3em;
+}
+.courses-webinar img {
+	width: 100%;
+	height: auto;
+	margin-top: 1em;
 }
 .webinar-wrapper {
 	position: relative;
@@ -198,6 +223,7 @@ header, main, footer {display: block;}
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: baseline;
+	padding-bottom: .4em;
 }
 .tariff-header time {
 	white-space: nowrap;
