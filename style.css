@@ -1,4 +1,7 @@
-html {-webkit-text-size-adjust: 100%;}
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
 body {margin: 0; font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 img {vertical-align: middle;}
 input, button, select {font: inherit;}
